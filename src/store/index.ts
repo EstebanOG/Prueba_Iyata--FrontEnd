@@ -25,14 +25,14 @@ export default createStore({
       }
     },
     filterByStatus({commit, state}, status) {
-      const filter = state.characters.filter((character) => {
+      const filter = state.characters.filter((character:any) => {
         return character.status.includes(status)
       })
       commit('setCharactersFilter', filter)
     },
     filterByName({commit, state}, name) {
       const formatName = name.toLowerCase()
-      const filter = state.characters.filter((character) => {
+      const filter = state.characters.filter((character:any) => {
         const characterName = character.name.toLowerCase()
         if(characterName.includes(formatName)) {
           return character

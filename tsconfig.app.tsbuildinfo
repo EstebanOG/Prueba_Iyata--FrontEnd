@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/vuex.d.ts","./src/router/index.ts","./src/store/index.ts","./src/app.vue","./src/components/cardcharacter.vue","./src/components/filterbyname.vue","./src/components/filterbystatus.vue","./src/components/listcharacters.vue","./src/views/algorithmtest.vue","./src/views/vuetest.vue"],"version":"5.6.2"}

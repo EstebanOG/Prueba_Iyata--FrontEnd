@@ -1,30 +1,16 @@
 <template>
   <div class="search">
-    <input
-      type="text"
-      placeholder="Search by name"
-      v-model="name"
-      @keyup="filter()"
-    >
+    <input type="text" placeholder="Search by name" v-model="name" @keyup="filter()">
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { useStore } from 'vuex'
-export default {
-  setup() {
-    const name = ref('')
-    const store = useStore()
-    const filter = () => {
-      store.dispatch('filterByName', name.value)
-    }
-
-    return {
-      name,
-      filter
-    }
-  }
+const name = ref('')
+const store = useStore()
+const filter = () => {
+  store.dispatch('filterByName', name.value)
 }
 </script>
 
@@ -32,6 +18,7 @@ export default {
 .search {
   width: 400px;
   margin: 3rem auto 0;
+
   input {
     height: 53px;
     width: 400px;

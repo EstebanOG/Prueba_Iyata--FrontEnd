@@ -15,23 +15,13 @@
   </div>
 </template>
 
-<script>
-import { useStore } from 'vuex'
-export default {
-  setup() {
-    const store = useStore()
-
-    const filter = ((status) => {
-      store.dispatch('filterByStatus', status)
-    })
-
-    return {
-      filter
-    }
-  }
-}
+<script setup lang="ts">
+import { useStore } from 'vuex';
+const store = useStore();
+const filter = ((status:any) => {
+  store.dispatch('filterByStatus', status)
+});
 </script>
-
 <style lang="scss">
 .filter {
   width: 400px;
@@ -40,11 +30,13 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   border-radius: 10px;
   overflow: hidden;
+
   .item {
     padding: 1rem 0.5rem;
     background-color: var(--background-card);
     text-align: center;
     cursor: pointer;
+
     &:hover {
       color: var(--text-orange);
     }

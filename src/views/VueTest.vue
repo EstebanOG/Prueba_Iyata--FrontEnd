@@ -7,9 +7,9 @@
     </div>
   </template>
   <script setup lang="ts">
-  import ListCharacters from '../components/ListCharacters.vue'
-  import FilterByStatus from '../components/FilterByStatus.vue'
-  import FilterByName from '../components/FilterByName.vue'
+  import ListCharacters from '../components/ListCharacters.vue';
+  import FilterByStatus from '../components/FilterByStatus.vue';
+  import FilterByName from '../components/FilterByName.vue';
   </script>
   <style lang="scss">
   </style>
