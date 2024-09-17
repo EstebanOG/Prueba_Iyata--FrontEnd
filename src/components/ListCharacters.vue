@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
-import CardCharacter from './CardCharacter.vue'
+import CardCharacter from '../components/CardCharacter.vue'
 const store = useStore();
 const characters = computed(() => {
   return store.state.charactersFilter
